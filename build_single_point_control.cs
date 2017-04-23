@@ -28,23 +28,14 @@ employee.payment=txtPayment;
 tempid=id;
 tempname=name;
 tempscore=score;
-tempbonus=bonus;
-tempdepartment=department;
-temppayment=payment;
 
 id=newId;
 name=newName;
 score=newScore;
-bonus=newBonus;
-department=newDepartment;
-payment=newPayment;
 
 newId=tempid;
 newName=tempname;
 newScore=tempscore;
-newBonus=tempbonus;
-newDepartment=tempdepartment;
-newPayment=temppayment;
 
 //使用结构体交换两组变量
 struct Student
