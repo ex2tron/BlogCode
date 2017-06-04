@@ -22,7 +22,7 @@ chown -R git:git sample.git
 
 
 # 克隆远程仓库
-$ git clone git@139.224.119.200:/home/git/sample.git
+$ git clone git@139.224.xxx.xxx:/home/git/sample.git
 
 
 # 推送到远程仓库
