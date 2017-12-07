@@ -1,3 +1,5 @@
+# More: http://ex2tron.top
+
 import cv2
 
 img = cv2.imread('lena.jpg')

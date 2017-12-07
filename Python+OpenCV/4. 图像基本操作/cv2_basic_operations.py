@@ -1,3 +1,5 @@
+# More: http://ex2tron.top
+
 import cv2
 
 img = cv2.imread('lena.jpg')
@@ -18,6 +20,8 @@ print(img[100, 100])  # [255 255 255]
 print(img.shape)  # (263, 263, 3)
 # 形状中包括高度、宽度和通道数
 height, width, channels = img.shape
+# img是灰度图的话：height, width = img.shape
+
 # 总像素数
 print(img.size)  # 263*263*3=207507
 # 数据类型
