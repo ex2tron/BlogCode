@@ -8,8 +8,8 @@ def mouse_event(event, x, y, flags, param):
     '''
     ### 鼠标的回调函数
     '''
-    # 通过flags判断具体是什么事件，这里是左键按下
-    if flags == cv2.EVENT_LBUTTONDOWN:
+    # 通过event判断具体是什么事件，这里是左键按下
+    if event == cv2.EVENT_LBUTTONDOWN:
         print((x, y))
 
 
