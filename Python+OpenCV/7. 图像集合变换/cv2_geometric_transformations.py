@@ -24,11 +24,11 @@ dst = cv2.warpAffine(img, M, (cols, rows))
 cv2.imshow('shift', dst)
 cv2.waitKey(0)
 
-# 45°旋转图片
+# 45°旋转图片并缩小一半
 M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 0.5)
 dst = cv2.warpAffine(img, M, (cols, rows))
 
-cv2.imshow('shift', dst)
+cv2.imshow('rotation', dst)
 cv2.waitKey(0)
 
 # 仿射变换
