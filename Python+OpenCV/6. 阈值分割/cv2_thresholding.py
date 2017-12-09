@@ -30,7 +30,7 @@ plt.show()
 
 
 # 自适应阈值对比固定阈值
-img = cv2.imread('dave.jpg', 0)
+img = cv2.imread('sudoku.jpg', 0)
 
 # 固定阈值
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
