@@ -22,7 +22,7 @@ cv2.waitKey(0)
 img1 = cv2.imread('lena.jpg')
 img2 = cv2.imread('opencv-logo-white.png')
 
-# 把logo放在左上角，所以创建左上角区域ROI
+# 把logo放在左上角，所以我们只关心这一块区域
 rows, cols = img2.shape[:2]
 roi = img1[:rows, :cols]
 
