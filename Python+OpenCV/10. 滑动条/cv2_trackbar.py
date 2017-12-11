@@ -28,4 +28,5 @@ while(True):
     r = cv2.getTrackbarPos('R', 'image')
     g = cv2.getTrackbarPos('G', 'image')
     b = cv2.getTrackbarPos('B', 'image')
+    # 设定img的颜色
     img[:] = [b, g, r]
