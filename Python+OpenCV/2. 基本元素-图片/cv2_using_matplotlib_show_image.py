@@ -3,13 +3,14 @@
 import cv2
 import matplotlib.pyplot as plt
 
-# 显示灰度图
+# 1.显示灰度图
 img = cv2.imread('lena.jpg', 0)
 plt.imshow(img, cmap='gray')
 plt.show()
 
-# 显示彩色图
+# 2.显示彩色图
 img = cv2.imread('lena.jpg')
+# 通道翻转：b/g/r -> r/g/b
 img2 = img[:, :, ::-1]
 # 或使用
 # img2 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)

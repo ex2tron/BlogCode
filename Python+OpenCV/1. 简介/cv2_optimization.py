@@ -5,7 +5,6 @@ import numpy as np
 
 # 性能对比优化
 
-# 1.立方
 start = cv2.getTickCount()
 x = 10
 y = x * x * x

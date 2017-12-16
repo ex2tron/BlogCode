@@ -3,14 +3,15 @@
 import cv2
 import numpy as np
 
-# 图片相加
+# 1.图片相加
 x = np.uint8([250])
 y = np.uint8([10])
 
 print(cv2.add(x, y))  # 250+10 = 260 => 255
 print(x + y)  # 250+10 = 260 % 256 = 4
 
-# 图像混合
+
+# 2.图像混合
 img1 = cv2.imread('lena_small.jpg')
 img2 = cv2.imread('opencv-logo-white.png')
 res = cv2.addWeighted(img1, .6, img2, .4, 0)
@@ -18,7 +19,8 @@ res = cv2.addWeighted(img1, .6, img2, .4, 0)
 cv2.imshow('blending', res)
 cv2.waitKey(0)
 
-# 按位操作
+
+# 3.按位操作
 img1 = cv2.imread('lena.jpg')
 img2 = cv2.imread('opencv-logo-white.png')
 

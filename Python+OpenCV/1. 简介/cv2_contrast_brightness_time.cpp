@@ -15,19 +15,19 @@ int main()
 	Mat gSrcImage = imread("lena.jpg");
 	Mat gDstImage = Mat::zeros(gSrcImage.size(), gSrcImage.type());
 
-	//访问每一个像素的方式
+	//1.访问每一个像素的方式
 	for (int y = 0; y < gSrcImage.rows; y++)
 	{
 		for (int x = 0; x < gSrcImage.cols; x++)
 		{
 			for (int c = 0; c < 3; c++)
 			{
-				gDstImage.at<Vec3b>(y, x)[c] = saturate_cast<uchar>(0.8*gSrcImage.at<Vec3b>(y, x)[c] + 80);
+				gDstImage.at<Vec3b>(y, x)[c] = saturate_cast<uchar>(0.8 * gSrcImage.at<Vec3b>(y, x)[c] + 80);
 			}
 		}
 	}
 
-	//最快速的方式
+	//2.最快速的方式
 	//gSrcImage.convertTo(gDstImage, -1, 0.8, 80);
 
 	// 停止计时

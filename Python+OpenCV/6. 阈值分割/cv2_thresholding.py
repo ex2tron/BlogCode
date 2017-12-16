@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # 灰度图读入
 img = cv2.imread('gradient.jpg', 0)
-# 阈值分割，ret：return value缩写，代表当前的阈值，暂时无用
+# 阈值分割，ret：return value缩写，代表当前的阈值，暂时不用理会
 ret, th = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow('thresh', th)
 cv2.waitKey(0)

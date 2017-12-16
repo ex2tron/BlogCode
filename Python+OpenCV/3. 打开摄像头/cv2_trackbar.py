@@ -11,6 +11,7 @@ def nothing(x):
     pass
 
 
+# 创建一副300×512的纯黑色图
 img = np.zeros((300, 512, 3), np.uint8)
 cv2.namedWindow('image')
 

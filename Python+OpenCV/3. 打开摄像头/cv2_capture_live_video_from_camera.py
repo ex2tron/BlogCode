@@ -2,10 +2,10 @@
 
 import cv2
 
-# 打开摄像头
+# 1.打开摄像头
 capture = cv2.VideoCapture(0)
 
-# 获取捕获的分辨率
+# 2.获取捕获的分辨率
 width, height = capture.get(3), capture.get(4)
 print(width, height)
 # 以原分辨率的一倍来捕获，
