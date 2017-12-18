@@ -23,7 +23,6 @@ print(kernel)
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (5, 5))  # 十字形结构
 print(kernel)
 
-
 # 3.开运算与闭运算
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))  # 定义结构元素
 

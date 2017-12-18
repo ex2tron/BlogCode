@@ -34,7 +34,16 @@ cv2.imshow('rotation', dst)
 cv2.waitKey(0)
 
 
-# 4.仿射变换
+# 4.翻转图片
+# 参数2=0：垂直翻转(沿x轴)，参数2>0: 水平翻转(沿y轴)
+# 参数2<0: 水平垂直翻转
+dst = cv2.flip(img, 1)
+# np.hstack: 横向并排，对比显示
+cv2.imshow('flip', np.hstack((img, dst)))  # np.hstack: 横向并排，对比显示
+cv2.waitKey(0)
+
+
+# 5.仿射变换
 # 变换前的三个点
 pts1 = np.float32([[50, 65], [150, 65], [210, 210]])
 # 变换后的三个点
