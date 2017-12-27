@@ -26,13 +26,13 @@ cv2.ellipse(img, (256, 256), (100, 50), 0, 0, 180, (255, 0, 0), -1)
 pts = np.array([[10, 5],  [50, 10], [70, 20], [20, 30]], np.int32)
 # 顶点个数：4，矩阵变成顶点数*1*2维
 pts = pts.reshape((-1, 1, 2))
-img = cv2.polylines(img, [pts], True, (0, 255, 255))
+cv2.polylines(img, [pts], True, (0, 255, 255))
 
 # 使用cv2.polylines()画多条直线
 line1 = np.array([[100, 20],  [300, 20]], np.int32).reshape((-1, 1, 2))
 line2 = np.array([[100, 60],  [300, 60]], np.int32).reshape((-1, 1, 2))
 line3 = np.array([[100, 100],  [300, 100]], np.int32).reshape((-1, 1, 2))
-img = cv2.polylines(img, [line1, line2, line3], True, (0, 255, 255))
+cv2.polylines(img, [line1, line2, line3], True, (0, 255, 255))
 
 
 # 6.添加文字
