@@ -27,7 +27,7 @@ for line in lines:
 
     cv2.line(drawing, (x1, y1), (x2, y2), (0, 0, 255))
 
-cv2.imshow('hough lines', drawing)
+cv2.imshow('hough lines', np.hstack((img, drawing)))
 cv2.waitKey(0)
 
 
@@ -42,7 +42,7 @@ for line in lines:
     x1, y1, x2, y2 = line[0]
     cv2.line(drawing, (x1, y1), (x2, y2), (0, 255, 0), 1, lineType=cv2.LINE_AA)
 
-cv2.imshow('probabilistic hough lines', drawing)
+cv2.imshow('probabilistic hough lines', np.hstack((img, drawing)))
 cv2.waitKey(0)
 
 
@@ -57,5 +57,5 @@ for i in circles[0, :]:
     cv2.circle(drawing, (i[0], i[1]), i[2], (0, 255, 0), 2)  # 画出外圆
     cv2.circle(drawing, (i[0], i[1]), 2, (0, 0, 255), 3)  # 画出圆心
 
-cv2.imshow('circles', drawing)
+cv2.imshow('circles', np.hstack((img, drawing)))
 cv2.waitKey(0)
