@@ -6,8 +6,6 @@
 month = int(input())
 if (month == 1):
     day = 31
-elif(month == 2):
-    day = 28
 elif (month == 2):
     day = 28
 elif(month == 3):
