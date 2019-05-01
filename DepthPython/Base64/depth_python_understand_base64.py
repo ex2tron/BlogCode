@@ -19,3 +19,10 @@ print(base64.urlsafe_b64encode(b'\xFB\xfe'))  # '-_4='
 with open('lena.jpg', 'rb') as pic:
     pic_str_data = base64.b64encode(pic.read())
 print(pic_str_data)
+
+
+# 中文
+ch_bytes = '中'.encode('utf-8') # b'\xe4\xb8\xad'
+# encode()默认是utf-8，可省略
+print(ch_bytes.decode()) # '中'
+print(base64.b64encode(ch_bytes))

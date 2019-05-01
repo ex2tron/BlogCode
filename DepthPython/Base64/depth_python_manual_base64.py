@@ -32,10 +32,11 @@ def my_b64_encode(ori_bytes):
             break
 
         third = (ori_bytes[i+1] & 0x0F)*4 + ((ori_bytes[i+2] & 0xC0) >> 6)
+        ret += base_charset[third]
 
         # 第四组
         fourth = ori_bytes[i+2] & 0x3F
-        ret += base_charset[third] + base_charset[fourth]
+        ret += base_charset[fourth]
 
     return ret
 
