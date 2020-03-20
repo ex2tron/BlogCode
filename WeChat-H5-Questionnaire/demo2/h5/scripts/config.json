@@ -1,0 +1,44 @@
+{
+    "qn_id": 1,
+    "page_title": "考核问卷",
+    "tips": [
+        "本问卷主要考核评测人员的基础图像鉴别能力，请自行完成；",
+        "中途退出结果不会缓存，请预留20分钟，一次性作答完毕；",
+        "考核题型不定，某些问题没有标准答案，主观作答即可。"
+    ],
+    "fields": [
+        {
+            "question": "观察图片，哪个更清晰？",
+            "pic_a": "http://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&f=JPEG?w=1280&h=853",
+            "pic_b": "http://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&f=JPEG?w=1280&h=853",
+            "type": "radio",
+            "options": [
+                "A更好",
+                "B更好",
+                "无法判断"
+            ],
+            "score": 80,
+            "answer": 0
+        },
+        {
+            "question": "观察图片，哪个说法是正确的？",
+            "pic_a": "http://t9.baidu.com/it/u=353721707,184451439&fm=79&app=86&f=JPEG?w=1280&h=853",
+            "pic_b": "",
+            "type": "checkbox",
+            "options": [
+                "饱和度更高",
+                "清晰度更高",
+                "亮度更低",
+                "开启了HDR",
+                "单图片多选测试"
+            ]
+        },
+        {
+            "question": "请输入您的ID：",
+            "pic_a": "",
+            "pic_b": "",
+            "type": "input",
+            "placeholder": "10位数"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+.qn-banner {
+    background: #3427dc;
+    text-align: center;
+}
+
+.qn-tips {
+    position: absolute;
+    width: 84vw;
+    background: white;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    height: 60vh;
+    top: 26vh;
+    left: 8vw;
+    right: 8vw;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.qn-tips > p {
+    margin: 10px 25px;
+    font-size: 13pt;
+    text-align: left;
+}
+
+.qn-tips > a {
+    position: absolute;
+    margin: 0px 30px;
+    bottom: 25px;
+    width: calc(100% - 60px);
+}
+
+.qn-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.qn-current {
+    display: block;
+}
+
+.qn-images {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin: 32px 0 20px 0;
+    text-align: center;
+}
+
+.qn-options {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin: 0px 0 20px 0;
+}
+
+.qn-question {
+    padding: 40px;
+}
+
+.weui-form__title {
+    font-size: 19px;
+}
+
+.weui-progress{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+
+.weui-progress__bar {
+    height: 15px;
+}
+
+.weui-icon-waiting {
+    color: #3427dc;
+}
+
+img {
+    max-width: 100%;
+    max-height: 42vh;
+}
+
+.weui-form {
+   /* padding: calc(48px + env(safe-area-inset-top)) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
+}
+
+.weui-btn {
+    width: 85%;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* .body {
+    height: 100vh;
+}
+
+.qn-item {
+    position: absolute;
+    visibility: hidden;
+}
+
+.qn-current {
+    visibility: visible;
+}
+
+.qn-btn-next {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.qn-commit {
+    position: absolute;
+    bottom: 20px;
+    width: 50%;
+    border-radius: 50px;
+    left: 25%;
+}
+
+.img-fluid {
+    max-height: 35vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.qn-title {
+    margin-top: 20px;
+    font-size: large;
+} */

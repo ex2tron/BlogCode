@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>{{ data.page_title }}</title>
+    <link rel="stylesheet" href="css/weui.css">
+    <link rel="stylesheet" href="css/qn.css">
+</head>
+
+<body>
+    <div id="tips">
+        {% block tips %}
+        {% endblock %}
+    </div>
+
+    <div id="form" class="weui-form">
+        {% block form %}
+        {% endblock %}
+    </div>
+    
+    <div id="end" style="display: none;">
+        {% block end %}
+        {% endblock %}
+    </div>
+
+    <div class="js_dialog" id="msg-dialog" style="display: none;">
+        <div class="weui-mask"></div>
+        <div class="weui-dialog">
+            <div id='msg-dialog-content' class="weui-dialog__bd"></div>
+            <div class="weui-dialog__ft">
+                <a class="weui-dialog__btn weui-dialog__btn_primary" onclick="HideToast()">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">加载中</p>
+        </div>
+    </div>
+
+    <script src="js/qn.js" crossorigin="anonymous"></script>
+    <script src="js/jweixin-1.3.2.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

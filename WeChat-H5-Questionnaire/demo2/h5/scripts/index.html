@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block tips %}
+<div class="qn-banner">
+    <img src="images/questionnaire.png" style="height: 34vh;" alt="">
+</div>
+
+<div class="qn-tips">
+    <h2 style="margin: 25px;">注意事项</h2>
+    {% for tip in data.tips %}
+    <p>{{ "%s. %s"|format(loop.index, tip) }}</p>
+    {% endfor %}
+    <a class="weui-btn weui-btn_primary" id="start-eval" onclick="StartEval()">开始评估</a>
+</div>
+
+<div class="weui-footer weui-footer_fixed-bottom">
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright &copy; 2020 JL-ex2tron</p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block form %}
+{% for item in data.fields %}
+<div class="qn-item">
+    <div class="weui-form__text-area">
+        <h3 class="weui-form__title">{{ "%s. %s"|format(loop.index, item.question) }}</h3>
+    </div>
+    <div class="qn-images">
+        <img src="{{item.pic_a}}" alt="">
+        <img src="{{item.pic_b}}" alt="">
+    </div>
+    <div class="qn-options">
+        <div class="weui-cells__group weui-cells__group_form">
+            {% if item.type == 'radio' or item.type == 'checkbox' %}
+            <div class="weui-cells weui-cells_{{item.type}}">
+                {% set outer_loop = loop %}
+                {% for option in item.options %}
+                <label class="weui-cell weui-cell_active weui-check__label"
+                    for="{{ '%s-%s'|format(outer_loop.index0, loop.index0) }}">
+                    <div class="weui-cell__bd">
+                        <p>{{option}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input type="{{item.type}}" class="weui-check" name="radio1" value="{{loop.index0}}" required
+                            id="{{ '%s-%s'|format(outer_loop.index0, loop.index0) }}" />
+                        <span class="weui-icon-checked"></span>
+                    </div>
+                </label>
+                {% endfor %}
+            </div>
+            {% elif item.type == 'input' %}
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__bd">
+                        <input id="js_input" class="weui-input" placeholder="{{item.placeholder}}" required />
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="weui-form__opr-area">
+        <a id="show-next" class="weui-btn weui-btn_primary" onclick="ShowNext()">下一步</a>
+    </div>
+</div>
+{% endfor%}
+<div id="qn-progress-container" class="weui-progress">
+    <div class="weui-progress__bar">
+        <div id='qn-progress' class="weui-progress__inner-bar js_progress"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block end %}
+<div class="weui-msg">
+    <div class="weui-msg__icon-area"><i class="weui-icon-waiting weui-icon_msg"></i></div>
+    <div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">是否提交结果？</h2>
+        <p class="weui-msg__desc">本问卷考核结果只记录一次，如需修改，请关闭本页面后重新评测。</p>
+    </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <a type="submit" onclick="Submit()" class="weui-btn weui-btn_primary">提交结果</a>
+        </p>
+    </div>
+</div>
+
+<div class="weui-footer weui-footer_fixed-bottom">
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright &copy; 2020 JL-ex2tron</p>
+    </div>
+</div>
+{% endblock %}
