@@ -37,14 +37,15 @@
             <div class="weui-cells weui-cells_{{item.type}}">
                 {% set outer_loop = loop %}
                 {% for option in item.options %}
+                {% set id = '%s-%s'|format(outer_loop.index0, loop.index0) %}
                 <label class="weui-cell weui-cell_active weui-check__label"
-                    for="{{ '%s-%s'|format(outer_loop.index0, loop.index0) }}">
+                    for="{{ id }}">
                     <div class="weui-cell__bd">
                         <p>{{option}}</p>
                     </div>
                     <div class="weui-cell__ft">
                         <input type="{{item.type}}" class="weui-check" name="radio1" value="{{loop.index0}}" required
-                            id="{{ '%s-%s'|format(outer_loop.index0, loop.index0) }}" />
+                            id="{{ id }}" />
                         <span class="weui-icon-checked"></span>
                     </div>
                 </label>
