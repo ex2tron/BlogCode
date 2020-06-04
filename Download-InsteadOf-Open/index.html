@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>同源</h2>
+        <a href="config.json">不加download</a>
+        <br>
+        <a href="config.json" download>加了download</a>
+        <br>
+        <a href="config.json" download='imcute.json'>加了download并重命名</a>
+    </div>
+
+    <div>
+        <h2>不同源</h2>
+        <a href="https://techblog-1253540739.cos.ap-chengdu.myqcloud.com/download-instead-preview.json">没设置请求头</a>
+        <br>
+        <a
+            href="https://techblog-1253540739.cos.ap-chengdu.myqcloud.com/download-instead-preview-attachment.json">设置了请求头</a>
+        <br>
+        <!-- <a href="https://techblog-1253540739.cos.ap-chengdu.myqcloud.com/download-instead-preview-attachment.json"
+            download="myConfig.json">同时设置了请求头和download</a> -->
+    </div>
+</body>
+
+</html>
